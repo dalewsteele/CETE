@@ -6,7 +6,7 @@ format: revealjs
 slide-number: true
 ---
 
-## A Story - Once upon a time...
+## A Story - Once upon a time ...
 
 ![](images\once_upon_a_time.jpg)
 
