@@ -257,10 +257,77 @@ ft
 -   Analysis pipelines are often complicated and computer intensive
 -   Collaboration pain-points
 
-## Reproducible AI?
+## Reproducible AI or AI for Reproducibility
 ![](images/ai_cures_all.jpg)
 
 [Is AI leading to a reproducibility crisis in science?](https://www.nature.com/articles/d41586-023-03817-6){target="_blank}
+
+## Documenting AI Use in Your Workflow
+
+```r
+# Good practice: Document AI assistance
+# File: analysis.R
+# Created: 2025-01-10
+# AI Tools Used: 
+#   - GitHub Copilot for regex pattern in lines 45-52
+#   - ChatGPT-4 for initial dplyr chain (modified in lines 78-95)
+# Last validated: 2025-01-10
+
+library(tidyverse)
+
+# AI-generated regex (verified against test cases)
+# Original prompt: "regex to extract ICD-10 codes from clinical notes"
+extract_icd10 <- function(text) {
+  str_extract_all(text, "\\b[A-TV-Z][0-9]{2}\\.?[0-9A-TV-Z]{0,4}\\b")
+}
+
+# Test cases to verify AI code
+test_cases <- tibble(
+  input = c("Patient has E11.9 diabetes", 
+            "Diagnosis: J18.9, I10",
+            "No codes here"),
+  expected = list(c("E11.9"), c("J18.9", "I10"), character(0))
+)
+
+test_cases <- test_cases %>%
+  mutate(
+    actual = map(input, extract_icd10),
+    passed = map2_lgl(expected, actual, identical)
+  )
+
+stopifnot(all(test_cases$passed))  # Halt if AI code fails tests
+```
+
+
+## Computational Non-Determinism Problem: **Hardware matters now.**
+
+Document your computing environment!
+
+```r
+# Even with set.seed(), some operations aren't reproducible
+library(keras)  # Python-based deep learning
+
+set.seed(123)  # This won't be enough!
+
+# Problem: GPU parallelism introduces randomness
+model <- keras_model_sequential() %>%
+  layer_dense(units = 64, activation = "relu") %>%
+  layer_dense(units = 1)
+
+# Run 1: loss = 0.234
+# Run 2: loss = 0.237  # Different! Even with same seed
+
+# Better approach: Document everything
+sessionInfo()  # R version, packages
+reticulate::py_config()  # Python environment
+# GPU model: NVIDIA RTX 3080
+# CUDA version: 11.8
+# Random seed: 123
+# Date/time: 2025-01-10 14:30 EST
+
+# For critical work: use CPU-only mode for reproducibility
+tensorflow::tf$config$set_visible_devices(list(), 'GPU')
+```
 
 ## Online Resources
 
