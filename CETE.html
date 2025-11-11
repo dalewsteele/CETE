@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Dale W. Steele, MD, MS">
-  <meta name="dcterms.date" content="2023-09-27">
+  <meta name="dcterms.date" content="2025-11-12">
   <title>Reproducible Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -205,7 +205,7 @@ Dale W. Steele, MD, MS
 </div>
 </div>
 
-  <p class="date">2023-09-27</p>
+  <p class="date">2025-11-12</p>
 </section>
 <section id="a-story---once-upon-a-time" class="slide level2">
 <h2>A Story - Once upon a time …</h2>
@@ -217,46 +217,38 @@ Dale W. Steele, MD, MS
 <img data-src="images\young_siraj.jpg" class="r-stretch"></section>
 <section id="the-analysis" class="slide level2">
 <h2>The Analysis</h2>
-<blockquote>
-
+<div>
 <ul>
-<li>Phone call from my brilliant, sometimes frenetic friend and colleague about a project related to disparities in our care</li>
-<li>“Can you help me with a regression analysis?”</li>
-<li>Met for Lunch with two laptops, a USB stick and and large order of bread sticks</li>
-<li>Spent a few pleasant hours that evening noodling with R</li>
-<li>Later implemented using SAS by my friend</li>
+<li class="fragment">Phone call from my brilliant, sometimes frenetic friend and colleague about a project related to disparities in our care</li>
+<li class="fragment">“Can you help me with a regression analysis?”</li>
+<li class="fragment">Met for Lunch with two laptops, a USB stick and and large order of bread sticks</li>
+<li class="fragment">Spent a few pleasant hours that evening noodling with R</li>
+<li class="fragment">Later implemented using SAS by my friend</li>
 </ul>
-
-</blockquote>
+</div>
 </section>
 <section id="months-later" class="slide level2">
 <h2>Months later…</h2>
-<blockquote>
-
+<div>
 <ul>
-<li>Manuscript submitted to a high impact journal</li>
-<li>Rejected by editor!</li>
-<li>Submitted to an somewhat lower impact journal</li>
-<li>Rejected!!</li>
+<li class="fragment">Manuscript submitted to a high impact journal</li>
+<li class="fragment">Rejected by editor!</li>
+<li class="fragment">Submitted to an somewhat lower impact journal</li>
+<li class="fragment">Rejected!!</li>
 </ul>
-
-</blockquote>
+</div>
 </section>
 <section id="even-more-months-later" class="slide level2">
 <h2>Even more months later…</h2>
-<blockquote>
-
+<div>
 <ul>
-<li>After 53 emails, reams of SAS output</li>
-<li>Submitted to a yet another journal</li>
+<li class="fragment">After 53 emails, reams of SAS output</li>
+<li class="fragment">Submitted to a yet another journal</li>
 </ul>
-
-</blockquote>
+</div>
 </section>
 <section id="still-later" class="slide level2">
 <h2>Still later…</h2>
-<blockquote>
-
 <ul>
 <li>Revise and reconsider!!!</li>
 <li>“I <strong>think</strong> the most recent one is laceartion.manuscript.reveision.WJEM.march2105inclyuding acuity model.docx”</li>
@@ -264,8 +256,12 @@ Dale W. Steele, MD, MS
 <li><strong>“Do you remember why we didn’t include <em>covariate X6</em> in the model?”</strong></li>
 <li>“They want the revised manuscript next week”</li>
 </ul>
-
-</blockquote>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div style="position: relative; width: fit-content; margin: auto;">
+<p><img data-src="images\siraj_disparities.png"></p>
+</div>
 </section>
 <section id="what-is-reproducible-research" class="slide level2">
 <h2>What is reproducible research?</h2>
@@ -277,6 +273,7 @@ Dale W. Steele, MD, MS
 <strong>figures</strong>, and <strong>tables</strong>, combined with</li>
 <li><strong>text</strong> describing methods and interpreting results</li>
 <li>and the software environment you used</li>
+<li>and the <em>hardware</em> you ran it on</li>
 </ul></li>
 <li>Someone else (or <strong>future you</strong>) can reproduce your analysis</li>
 </ul>
@@ -285,18 +282,21 @@ Dale W. Steele, MD, MS
 <h2>Tools for Analysis</h2>
 
 <img data-src="images\stats_programs_meme.jpg" class="r-stretch"></section>
-<section id="gui" class="slide level2">
-<h2>GUI</h2>
-
-<img data-src="images\stata_gui.png" class="r-stretch"></section>
-<section id="dont" class="slide level2">
-<h2>Don’t!!</h2>
+<section id="graphical-user-interface-stata" class="slide level2">
+<h2>Graphical User Interface: Stata</h2>
+<div style="position: relative; width: fit-content; margin: auto;">
+<p><img data-src="images/stata_gui.png" width="1200"></p>
+</div>
+</section>
+<section id="beware" class="slide level2">
+<h2>Beware!!</h2>
 
 <img data-src="images\Cut-copy-and-paste-images.jpg" class="r-stretch"></section>
 <section id="why-geeks-love-plain-text-and-why-you-should-too" class="slide level2">
 <h2>Why Geeks Love Plain Text (and why you should too)</h2>
+<h3 id="the-elegance-of-plain-text-writing">The Elegance of Plain-Text Writing</h3>
 
-<img data-src="images\txt.png" class="r-stretch"><p><a href="https://www.lifehack.org/articles/technology/why-geeks-love-plain-text-and-why-you-should-too.html" class="uri">https://www.lifehack.org/articles/technology/why-geeks-love-plain-text-and-why-you-should-too.html</a></p>
+<img data-src="images\txt.png" class="r-stretch"><p><a href="https://unvarnishedgeek.github.io/2020/11/25/plain-text-one.html" class="uri">https://unvarnishedgeek.github.io/2020/11/25/plain-text-one.html</a></p>
 </section>
 <section id="stata-do-file-editor" class="slide level2">
 <h2>Stata: Do-file Editor</h2>
@@ -327,7 +327,7 @@ Dale W. Steele, MD, MS
 </ul>
 <p><a href="https://speakerdeck.com/jennybc/how-to-name-files" class="uri">https://speakerdeck.com/jennybc/how-to-name-files</a> <a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions" class="uri">https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions</a></p>
 </section>
-<section id="section" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 
 <img data-src="images/cluttered_desktop_meme.jpg" class="r-stretch"></section>
@@ -347,34 +347,25 @@ Dale W. Steele, MD, MS
 <h2>The Golden Rule</h2>
 <ul>
 <li>First and foremost, <em>raw data should never be changed</em>!</li>
-<li>Save it into a “data” folder and treat it as immutable</li>
+<li>Save raw data to “data” folder and treat it as immutable</li>
 </ul>
 </section>
 <section id="other-goals-for-a-reproducible-project" class="slide level2">
 <h2>Other Goals for a Reproducible Project</h2>
 <ul>
+<li>DRY (Don’t Repeat Yourself)
+<ul>
 <li>minimize duplication of code and data</li>
-<li>self-contained</li>
+</ul></li>
+<li>Self-contained</li>
 <li>README file(s)</li>
 </ul>
 <p><a href="https://ecorepsci.github.io/reproducible-science/project-organization.html#golden-rules" class="uri">https://ecorepsci.github.io/reproducible-science/project-organization.html#golden-rules</a></p>
 </section>
-<section id="version-control" class="slide level2">
-<h2>Version Control</h2>
+<section id="version-control-github-repository-for-this-presentation" class="slide level2">
+<h2>Version Control: Github repository for this presentation</h2>
 
-<img data-src="images/github.jpg" class="r-stretch"></section>
-<section id="databases-and-spreadsheets" class="slide level2">
-<h2>Databases and Spreadsheets</h2>
-<ul>
-<li>Database <img data-src="images\redcap.png"></li>
-<li>Application Programming Interface (API)</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>ds <span class="ot">&lt;-</span> <span class="fu">redcap_read</span>(<span class="at">redcap_uri=</span>uri, <span class="at">token=</span>token)<span class="sc">$</span>data </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>- Spreadsheet <img data-src="images\google_sheets.jpg"></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(googlesheets4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>evmap <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(link, <span class="at">sheet =</span> <span class="st">"OCD_evidence_map"</span>, <span class="at">col_types =</span> <span class="st">'c'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href=""></a><span class="fu">clean_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
+<img data-src="images/github_cete.png" class="r-stretch"></section>
 <section id="spreadsheet-hell-formatting-to-convey-information" class="slide level2">
 <h2>Spreadsheet Hell: Formatting to Convey Information</h2>
 
@@ -409,20 +400,42 @@ temporary, it is not used to bestow meaning.</li>
 <li>Each type of observational unit forms a table <img data-src="images\tidy-data.png"> <a href="https://r4ds.had.co.nz/tidy-data.html" class="uri">https://r4ds.had.co.nz/tidy-data.html</a></li>
 </ul>
 </section>
+<section id="google-sheets" class="slide level2">
+<h2>Google sheets</h2>
+<h3 id="parse-sheet-with-r">Parse sheet with R!</h3>
+
+<img data-src="images\gsheet.png" class="r-stretch"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(googlesheets4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>evmap <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(link, <span class="at">sheet =</span> <span class="st">"OCD_evidence_map"</span>, <span class="at">col_types =</span> <span class="st">'c'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href=""></a><span class="fu">clean_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="when-a-spreadsheet-isnt-enough" class="slide level2">
+<h2>When a Spreadsheet Isn’t Enough</h2>
+<h3 id="databases">Databases</h3>
+
+<img data-src="images\redcap.png" class="r-stretch quarto-figure-center"><p class="caption">REDCap</p><ul>
+<li>Application Programming Interface (API)</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>ds <span class="ot">&lt;-</span> <span class="fu">redcap_read</span>(<span class="at">redcap_uri=</span>uri, <span class="at">token=</span>token)<span class="sc">$</span>data </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="literate-programming" class="slide level2">
 <h2>Literate Programming</h2>
 <ul>
 <li>Markdown: a plain text format designed to be easy to write, and, even more important, easy to read</li>
-<li>May contain code chunks (<code>R</code>, <code>python</code>, etc.)</li>
-<li>The file containing code and text is “knitted” or “rendered” to produce output to multiple possible formats, e.g., pdf, web pages, html slides, <strong>even</strong> MSWord</li>
+<li>May contain code chunks (<code>R</code>, <code>Python</code>, <code>Julia</code>, etc.)</li>
+<li>The file containing code and text is “knitted” or “rendered” to produce output to multiple possible formats, e.g., pdf, web pages, html slides, <strong>even</strong> MSWord or PowerPoint</li>
 </ul>
 </section>
 <section id="my-2011-masters-thesis" class="slide level2">
 <h2>My 2011 Master’s Thesis</h2>
 
-<img data-src="images\emacs_ess_Rnw.png" class="r-stretch"></section>
-<section id="example-plot---the-r-tidyverse" class="slide level2">
-<h2>Example Plot - The R “tidyverse”</h2>
+<img data-src="images/emacs_ess_Rnw.png" class="r-stretch quarto-figure-center"><p class="caption">Written in GNU emacs</p></section>
+<section id="why-are-so-many-people-downloading" class="slide level2">
+<h2>Why are so many people downloading?</h2>
+<p><img data-src="images/uri_thesis.jpg"> <a href="https://digitalcommons.uri.edu/theses/107/" class="uri">https://digitalcommons.uri.edu/theses/107/</a></p>
+</section>
+<section id="code-to-make-plots" class="slide level2">
+<h2>CODE to Make Plots</h2>
+<h3 id="ggplot-in-r-part-of-the-tidyverse">ggplot in R, part of the “tidyverse”</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb4-2"><a href=""></a></span>
@@ -433,7 +446,7 @@ temporary, it is not used to bestow meaning.</li>
 </div>
 
 </section>
-<section id="example-plot---the-r-tidyverse-output" class="slide level2 output-location-slide"><h2>Example Plot - The R “tidyverse”</h2><div class="cell output-location-slide">
+<section id="code-to-make-plots-output" class="slide level2 output-location-slide"><h2>CODE to Make Plots</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
 <div>
 <figure>
@@ -441,8 +454,9 @@ temporary, it is not used to bestow meaning.</li>
 </figure>
 </div>
 </div>
-</div></section><section id="flextable-table-generation-in-r" class="slide level2">
-<h2>Flextable: Table Generation in R</h2>
+</div></section><section id="code-to-make-tables" class="slide level2">
+<h2>Code to Make Tables</h2>
+<h3 id="flextable-table-generation-in-r">Flextable: Table Generation in R</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">library</span>(flextable)</span>
 <span id="cb5-2"><a href=""></a>ft <span class="ot">&lt;-</span> <span class="fu">flextable</span>(airquality[ <span class="fu">sample.int</span>(<span class="dv">10</span>),]) <span class="sc">|&gt;</span> </span>
@@ -456,15 +470,15 @@ temporary, it is not used to bestow meaning.</li>
 </div>
 
 </section>
-<section id="flextable-table-generation-in-r-output" class="slide level2 output-location-slide"><h2>Flextable: Table Generation in R</h2><div class="cell output-location-slide">
+<section id="code-to-make-tables-output" class="slide level2 output-location-slide"><h2>Code to Make Tables</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-3e81709e{}.cl-3e7edf28{font-family:'Helvetica';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3e7edf32{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3e7edf33{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(102, 102, 102, 1.00);background-color:transparent;}.cl-3e7feeea{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3e7feeeb{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3e7ff91c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e7ff91d{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e7ff91e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e7ff926{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e7ff927{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-3e81709e"><thead><tr style="overflow-wrap:break-word;"><th colspan="4" class="cl-3e7ff91c"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Air quality</span></p></th><th colspan="2" class="cl-3e7ff91c"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Time</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Ozone</span></p></th><th class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Solar.R</span></p></th><th class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Wind</span></p></th><th class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Temp</span></p></th><th class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Month</span></p></th><th class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf28">Day</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff91e"><p class="cl-3e7feeea"><span class="cl-3e7edf32">19</span></p></td><td class="cl-3e7ff91e"><p class="cl-3e7feeea"><span class="cl-3e7edf32">99</span></p></td><td class="cl-3e7ff91e"><p class="cl-3e7feeea"><span class="cl-3e7edf32">13.8</span></p></td><td class="cl-3e7ff91e"><p class="cl-3e7feeea"><span class="cl-3e7edf32">59</span></p></td><td class="cl-3e7ff91e"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff91e"><p class="cl-3e7feeea"><span class="cl-3e7edf32">8</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">36</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">118</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">8.0</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">72</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32"></span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">194</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">8.6</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">69</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">10</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">18</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">313</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">11.5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">62</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">8</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">19</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">20.1</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">61</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">9</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">12</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">149</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">12.6</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">74</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">3</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32"></span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32"></span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">14.3</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">56</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">28</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32"></span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">14.9</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">66</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">6</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">23</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">299</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">8.6</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">65</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff926"><p class="cl-3e7feeea"><span class="cl-3e7edf32">7</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf32">41</span></p></td><td class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf32">190</span></p></td><td class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf32">7.4</span></p></td><td class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf32">67</span></p></td><td class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf32">5</span></p></td><td class="cl-3e7ff91d"><p class="cl-3e7feeea"><span class="cl-3e7edf32">1</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-3e7ff927"><p class="cl-3e7feeeb"><span class="cl-3e7edf33">Daily air quality measurements in NYC, May to Sept 1973.</span></p></td></tr></tfoot></table></div>
+<div class="tabwid"><style>.cl-b3badbac{}.cl-b3b853e6{font-family:'Helvetica';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b3b853f0{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b3b853f1{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(102, 102, 102, 1.00);background-color:transparent;}.cl-b3b95ed0{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b3b95eda{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b3b968ee{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b3b968ef{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b3b968f0{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b3b968f1{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b3b968f2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-b3badbac"><thead><tr style="overflow-wrap:break-word;"><th colspan="4" class="cl-b3b968ee"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Air quality</span></p></th><th colspan="2" class="cl-b3b968ee"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Time</span></p></th></tr><tr style="overflow-wrap:break-word;"><th class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Ozone</span></p></th><th class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Solar.R</span></p></th><th class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Wind</span></p></th><th class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Temp</span></p></th><th class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Month</span></p></th><th class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853e6">Day</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f0"><p class="cl-b3b95ed0"><span class="cl-b3b853f0"></span></p></td><td class="cl-b3b968f0"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">194</span></p></td><td class="cl-b3b968f0"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">8.6</span></p></td><td class="cl-b3b968f0"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">69</span></p></td><td class="cl-b3b968f0"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f0"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">10</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">18</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">313</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">11.5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">62</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">36</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">118</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">8.0</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">72</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0"></span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0"></span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">14.3</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">56</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">41</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">190</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">7.4</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">67</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">28</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0"></span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">14.9</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">66</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">6</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">23</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">299</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">8.6</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">65</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">7</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">12</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">149</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">12.6</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">74</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">3</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">19</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">99</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">13.8</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">59</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968f1"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">8</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">8</span></p></td><td class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">19</span></p></td><td class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">20.1</span></p></td><td class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">61</span></p></td><td class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">5</span></p></td><td class="cl-b3b968ef"><p class="cl-b3b95ed0"><span class="cl-b3b853f0">9</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-b3b968f2"><p class="cl-b3b95eda"><span class="cl-b3b853f1">Daily air quality measurements in NYC, May to Sept 1973.</span></p></td></tr></tfoot></table></div>
 </div>
-</div></section><section id="disadvantages-and-challenges" class="slide level2">
-<h2>Disadvantages and Challenges</h2>
+</div></section><section id="challenges" class="slide level2">
+<h2>Challenges</h2>
 <ul>
 <li>Security and confidentiality of patient information</li>
-<li>Tools evolve, i.e., Sweave -&gt; knitr -&gt; quarto</li>
+<li>Tools evolve, i.e., Sweave -&gt; knitr -&gt; Quarto</li>
 <li>You have to know what you are doing to make it pretty</li>
 <li>Multiple options, e.g., R, python, Stata</li>
 <li>Takes longer to learn and initially implement</li>
@@ -472,15 +486,20 @@ temporary, it is not used to bestow meaning.</li>
 <li>Collaboration pain-points</li>
 </ul>
 </section>
+<section id="reproducible-ai" class="slide level2">
+<h2>Reproducible AI?</h2>
+
+<img data-src="images/ai_cures_all.jpg" class="r-stretch"><p><a href="https://www.nature.com/articles/d41586-023-03817-6" target="&quot;_blank">Is AI leading to a reproducibility crisis in science?</a></p>
+</section>
 <section id="online-resources" class="slide level2">
 <h2>Online Resources</h2>
 <ul>
-<li><p><a href="https://alicepaul.github.io/health-data-science-in-r/">Health Data Science in R</a></p></li>
-<li><p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a></p></li>
-<li><p><a href="https://stat545.com/">Data Wrangling, exploration and analysis with R</a></p></li>
-<li><p><a href="https://mdsr-book.github.io/mdsr3e/">Modern Data Science with R</a></p></li>
-<li><p><a href="https://happygitwithr.com/">Happy Git and HitHub for the useR</a></p></li>
-<li><p><a href="https://raps-with-r.dev/">Building reproducible analytical pipelines with R</a></p></li>
+<li><p><a href="https://alicepaul.github.io/health-data-science-using-r/" target="_blank">Health Data Science in R</a></p></li>
+<li><p><a href="https://r4ds.hadley.nz/" target="_blank">R for Data Science (2e)</a></p></li>
+<li><p><a href="https://stat545.com/" target="_blank">Data Wrangling, exploration and analysis with R</a></p></li>
+<li><p><a href="https://mdsr-book.github.io/mdsr3e/" target="_blank">Modern Data Science with R</a></p></li>
+<li><p><a href="https://happygitwithr.com/" target="_blank">Happy Git and HitHub for the useR</a></p></li>
+<li><p><a href="https://raps-with-r.dev/" target="_blank">Building reproducible analytical pipelines with R</a></p></li>
 </ul>
 
 </section>

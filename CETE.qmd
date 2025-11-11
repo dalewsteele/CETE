@@ -16,31 +16,43 @@ slide-number: true
 
 ## The Analysis
 
-> -   Phone call from my brilliant, sometimes frenetic friend and colleague about a project related to disparities in our care
-> -   "Can you help me with a regression analysis?"
-> -   Met for Lunch with two laptops, a USB stick and and large order of bread sticks
-> -   Spent a few pleasant hours that evening noodling with R
-> -   Later implemented using SAS by my friend
+::: incremental
+-   Phone call from my brilliant, sometimes frenetic friend and colleague about a project related to disparities in our care
+-   "Can you help me with a regression analysis?"
+-   Met for Lunch with two laptops, a USB stick and and large order of bread sticks
+-   Spent a few pleasant hours that evening noodling with R
+-   Later implemented using SAS by my friend
+:::
 
 ## Months later...
 
-> -   Manuscript submitted to a high impact journal
-> -   Rejected by editor!
-> -   Submitted to an somewhat lower impact journal
-> -   Rejected!!
+::: incremental
+-   Manuscript submitted to a high impact journal
+-   Rejected by editor!
+-   Submitted to an somewhat lower impact journal
+-   Rejected!!
+:::
 
 ## Even more months later...
 
-> -   After 53 emails, reams of SAS output
-> -   Submitted to a yet another journal
+::: incremental
+-   After 53 emails, reams of SAS output
+-   Submitted to a yet another journal
+:::
 
 ## Still later...
 
-> -   Revise and reconsider!!!
-> -   "I **think** the most recent one is laceartion.manuscript.reveision.WJEM.march2105inclyuding acuity model.docx"
-> -   **"Can you just edit the methods and results section?"**
-> -   **"Do you remember why we didn't include *covariate X6* in the model?"**
-> -   "They want the revised manuscript next week"
+-   Revise and reconsider!!!
+-   "I **think** the most recent one is laceartion.manuscript.reveision.WJEM.march2105inclyuding acuity model.docx"
+-   **"Can you just edit the methods and results section?"**
+-   **"Do you remember why we didn't include *covariate X6* in the model?"**
+-   "They want the revised manuscript next week"
+
+##
+
+::: {style="position: relative; width: fit-content; margin: auto;"}
+![](images\siraj_disparities.png)
+:::
 
 ## What is reproducible research?
 
@@ -50,25 +62,31 @@ slide-number: true
         **figures**, and **tables**, combined with
     -   **text** describing methods and interpreting results
     -   and the software environment you used
+    -   and the *hardware* you ran it on
 -   Someone else (or **future you**) can reproduce your analysis
 
 ## Tools for Analysis
 
 ![](images\stats_programs_meme.jpg)
 
-## GUI
 
-![](images\stata_gui.png)
+## Graphical User Interface: Stata
 
-## Don't!!
+::: {style="position: relative; width: fit-content; margin: auto;"}
+![](images/stata_gui.png){width="1200"}
+:::
+
+## Beware!!
 
 ![](images\Cut-copy-and-paste-images.jpg)
 
 ## Why Geeks Love Plain Text (and why you should too)
 
+### The Elegance of Plain-Text Writing
+
 ![](images\txt.png)
 
-<https://www.lifehack.org/articles/technology/why-geeks-love-plain-text-and-why-you-should-too.html>
+<https://unvarnishedgeek.github.io/2020/11/25/plain-text-one.html>
 
 ## Stata: Do-file Editor
 
@@ -113,39 +131,20 @@ slide-number: true
 ## The Golden Rule
 
 -   First and foremost, *raw data should never be changed*!
--   Save it into a "data" folder and treat it as immutable
+-   Save raw data to "data" folder and treat it as immutable
 
 ## Other Goals for a Reproducible Project
 
--   minimize duplication of code and data
--   self-contained
+-   DRY (Don't Repeat Yourself)
+    -   minimize duplication of code and data
+-   Self-contained
 -   README file(s)
 
 <https://ecorepsci.github.io/reproducible-science/project-organization.html#golden-rules>
 
-## Version Control
+## Version Control: Github repository for this presentation
 
-![](images/github.jpg)
-
-## Databases and Spreadsheets
-
--   Database ![](images\redcap.png)
--   Application Programming Interface (API)
-
-``` r
-ds <- redcap_read(redcap_uri=uri, token=token)$data 
-```
-
-\- Spreadsheet ![](images\google_sheets.jpg)
-
-``` r
-library(googlesheets4)
-```
-
-``` r
-evmap <- read_sheet(link, sheet = "OCD_evidence_map", col_types = 'c') |>
-clean_names()
-```
+![](images/github_cete.png)
 
 ## Spreadsheet Hell: Formatting to Convey Information
 
@@ -176,17 +175,49 @@ clean_names()
 -   Each observation forms a row
 -   Each type of observational unit forms a table ![](images\tidy-data.png) <https://r4ds.had.co.nz/tidy-data.html>
 
+## Google sheets
+
+### Parse sheet with R!
+
+![](images\gsheet.png)
+
+``` r
+library(googlesheets4)
+```
+
+``` r
+evmap <- read_sheet(link, sheet = "OCD_evidence_map", col_types = 'c') |>
+clean_names()
+```
+
+## When a Spreadsheet Isn't Enough
+
+### Databases
+
+![REDCap](images\redcap.png)
+
+-   Application Programming Interface (API)
+
+``` r
+ds <- redcap_read(redcap_uri=uri, token=token)$data 
+```
+
 ## Literate Programming
 
 -   Markdown: a plain text format designed to be easy to write, and, even more important, easy to read
--   May contain code chunks (`R`, `python`, etc.)
--   The file containing code and text is "knitted" or "rendered" to produce output to multiple possible formats, e.g., pdf, web pages, html slides, **even** MSWord
+-   May contain code chunks (`R`, `Python`, `Julia`, etc.)
+-   The file containing code and text is "knitted" or "rendered" to produce output to multiple possible formats, e.g., pdf, web pages, html slides, **even** MSWord or PowerPoint
 
 ## My 2011 Master's Thesis
 
-![](images\emacs_ess_Rnw.png)
+![Written in GNU emacs](images/emacs_ess_Rnw.png)
 
-## Example Plot - The R "tidyverse"
+## Why are so many people downloading?
+
+![](images/uri_thesis.jpg) <https://digitalcommons.uri.edu/theses/107/>
+
+## CODE to Make Plots
+### ggplot in R, part of the "tidyverse"
 
 ```{r}
 #| echo: true
@@ -199,7 +230,8 @@ mtcars |>
   geom_smooth(method = "loess", formula = "y~x")
 ```
 
-## Flextable: Table Generation in R
+## Code to Make Tables
+### Flextable: Table Generation in R
 
 ```{r}
 #| echo: true
@@ -215,26 +247,31 @@ ft <- flextable(airquality[ sample.int(10),]) |>
 ft
 ```
 
-## Disadvantages and Challenges
+## Challenges
 
 -   Security and confidentiality of patient information
--   Tools evolve, i.e., Sweave -\> knitr -\> quarto
+-   Tools evolve, i.e., Sweave -\> knitr -\> Quarto
 -   You have to know what you are doing to make it pretty
 -   Multiple options, e.g., R, python, Stata
 -   Takes longer to learn and initially implement
 -   Analysis pipelines are often complicated and computer intensive
 -   Collaboration pain-points
 
+## Reproducible AI?
+![](images/ai_cures_all.jpg)
+
+[Is AI leading to a reproducibility crisis in science?](https://www.nature.com/articles/d41586-023-03817-6){target="_blank}
+
 ## Online Resources
 
--   [Health Data Science in R](https://alicepaul.github.io/health-data-science-in-r/)
+-   [Health Data Science in R](https://alicepaul.github.io/health-data-science-using-r/){target="_blank"}
 
--   [R for Data Science (2e)](https://r4ds.hadley.nz/)
+-   [R for Data Science (2e)](https://r4ds.hadley.nz/){target="_blank"}
 
--   [Data Wrangling, exploration and analysis with R](https://stat545.com/)
+-   [Data Wrangling, exploration and analysis with R](https://stat545.com/){target="_blank"}
 
--   [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/)
+-   [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/){target="_blank"}
 
--   [Happy Git and HitHub for the useR](https://happygitwithr.com/)
+-   [Happy Git and HitHub for the useR](https://happygitwithr.com/){target="_blank"}
 
--   [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
+-   [Building reproducible analytical pipelines with R](https://raps-with-r.dev/){target="_blank"}
