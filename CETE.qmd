@@ -1,26 +1,25 @@
 ---
-title: "Reproducible Research"
+title: "Data Wrangling & Reproducible Research"
 author: "Dale W. Steele, MD, MS"
 date: "12 November, 2025"
 format: revealjs
 slide-number: true
 ---
 
-## A Story - Once upon a time ...
-
+## A Story About **non**-reproducible Research
 ![](images\once_upon_a_time.jpg)
 
 ## A younger Siraj Amanullah, MD, MPH
 
 ![](images\young_siraj.jpg)
 
-## The Analysis
+## The Analysis ...
 
 ::: incremental
 -   Phone call from my brilliant, sometimes frenetic friend and colleague about a project related to disparities in our care
 -   "Can you help me with a regression analysis?"
 -   Met for Lunch with two laptops, a USB stick and and large order of bread sticks
--   Spent a few pleasant hours that evening noodling with R
+-   I spent a few pleasant hours that evening noodling with R
 -   Later implemented using SAS by my friend
 :::
 
@@ -50,9 +49,7 @@ slide-number: true
 
 ##
 
-::: {style="position: relative; width: fit-content; margin: auto;"}
 ![](images\siraj_disparities.png)
-:::
 
 ## What is reproducible research?
 
@@ -252,8 +249,7 @@ ft
 -   Security and confidentiality of patient information
 -   Tools evolve, i.e., Sweave -\> knitr -\> Quarto
 -   You have to know what you are doing to make it pretty
--   Multiple options, e.g., R, python, Stata
--   Takes longer to learn and initially implement
+-   Multiple software tools, e.g., R, python, Stata, SAS
 -   Analysis pipelines are often complicated and computer intensive
 -   Collaboration pain-points
 
