@@ -6,7 +6,7 @@ format: revealjs
 slide-number: true
 ---
 
-## A Story About **non**-reproducible Research
+## A Story About **Non**-Reproducible Research
 ![](images\once_upon_a_time.jpg)
 
 ## A younger Siraj Amanullah, MD, MPH
