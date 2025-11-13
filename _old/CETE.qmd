@@ -1,0 +1,340 @@
+---
+title: "Data Wrangling & Reproducible Research"
+author: "Dale W. Steele, MD, MS"
+date: "12 November, 2025"
+format: revealjs
+slide-number: true
+---
+
+# A Story About **Non**-Reproducible Research
+![](images\once_upon_a_time.jpg)
+
+## A younger Siraj Amanullah, MD, MPH
+
+![](images\young_siraj.jpg)
+
+## The Analysis ...
+
+::: incremental
+-   Phone call from my brilliant, sometimes frenetic friend and colleague about a project related to disparities in our care
+-   "Can you help me with a regression analysis?"
+-   Met for Lunch with two laptops, a USB stick and and large order of bread sticks
+-   I spent a few pleasant hours that evening noodling with R
+-   Later implemented using SAS by my friend
+:::
+
+## Months later...
+
+::: incremental
+-   Manuscript submitted to a high impact journal
+-   Rejected by editor!
+-   Submitted to an somewhat lower impact journal
+-   Rejected!!
+:::
+
+## Even more months later...
+
+::: incremental
+-   After 53 emails, reams of SAS output
+-   Submitted to a yet another journal
+:::
+
+## Still later...
+
+-   Revise and reconsider!!!
+-   "I **think** the most recent one is laceartion.manuscript.reveision.WJEM.march2105inclyuding acuity model.docx"
+-   **"Can you just edit the methods and results section?"**
+-   **"Do you remember why we didn't include *covariate X6* in the model?"**
+-   "They want the revised manuscript next week"
+
+##
+
+![](images\siraj_disparities.png)
+
+## What is reproducible research?
+
+-   Given the raw data
+    -   and the **code** used to **clean and analyse the data**
+    -   and the **code** used to generate **results**,\
+        **figures**, and **tables**, combined with
+    -   **text** describing methods and interpreting results
+    -   and the software environment you used
+    -   and the *hardware* you ran it on
+-   Someone else (or **future you**) can reproduce your analysis
+
+## Tools for Analysis
+
+![](images\stats_programs_meme.jpg)
+
+
+## Graphical User Interface: Stata
+
+::: {style="position: relative; width: fit-content; margin: auto;"}
+![](images/stata_gui.png){width="1200"}
+:::
+
+## Beware!!
+
+![](images\Cut-copy-and-paste-images.jpg)
+
+## Why Geeks Love Plain Text (and why you should too)
+
+### The Elegance of Plain-Text Writing
+
+![](images\txt.png)
+
+<https://unvarnishedgeek.github.io/2020/11/25/plain-text-one.html>
+
+## Stata: Do-file Editor
+
+![](images\stata_do_editor.png)
+
+## File Names
+
+![](images\file_naming_conventions.png)
+
+## File Naming Conventions
+
+-   Use consistent file names
+    -   that are machine readable **AND** human readable
+    -   that play well with default ordering
+    -   regular expression and globbing friendly
+    -   avoid spaces, punctuation, accented characters, case sensitivity
+
+## File Naming continued...
+
+-   Use "-" to delimit words and "\_" to delimit sections
+-   YYYY-MM-DD for dates, eg., 2019-01-19_my-data.csv
+-   Left-pad numbers, i.e., 01_my-data.csv versus 1_my-data.csv
+
+<https://speakerdeck.com/jennybc/how-to-name-files> <https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions>
+
+## 
+
+![](images/cluttered_desktop_meme.jpg)
+
+## Consistent and Informative Directory Structure
+
+![](images/directory-structure.png)
+
+## RStudio: An Integrated Development Environment for R
+
+![](images/rstudio.png)
+
+## RStudio Project Directory Structure
+
+![](images/folder-structure.png)
+
+## The Golden Rule
+
+-   First and foremost, *raw data should never be changed*!
+-   Save raw data to "data" folder and treat it as immutable
+
+## Other Goals for a Reproducible Project
+
+-   DRY (Don't Repeat Yourself)
+    -   minimize duplication of code and data
+-   Self-contained
+-   README file(s)
+
+<https://ecorepsci.github.io/reproducible-science/project-organization.html#golden-rules>
+
+## Version Control: Github repository for this presentation
+
+![](images/github_cete.png)
+
+## Spreadsheet Hell: Formatting to Convey Information
+
+![](images\spreadsheet_errors.png)
+
+## Spreadsheet Hell: Multiple Tables per Sheet
+
+![](images\multiple_tables.jpg)
+
+## Escape from Spreadsheet Hell
+
+-   One sheet, one "data set"
+-   Only one value is stored in each cell
+-   There are no merged cells
+-   There are no blank rows or columns used as (visual) separators
+
+## More Escape from Spreadsheet Hell
+
+-   Decorative formatting only used to aid navigation or is\
+    temporary, it is not used to bestow meaning.
+-   Only the first row should be used for headers and the header names should not contain spaces
+
+<https://instr.iastate.libguides.com/spreadsheets/setup>
+
+## Preparing Data - Tidy Data
+
+-   Each variable forms a column
+-   Each observation forms a row
+-   Each type of observational unit forms a table ![](images\tidy-data.png) <https://r4ds.had.co.nz/tidy-data.html>
+
+## Google sheets
+
+### Parse sheet with R!
+
+![](images\gsheet.png)
+
+``` r
+library(googlesheets4)
+```
+
+``` r
+evmap <- read_sheet(link, sheet = "OCD_evidence_map", col_types = 'c') |>
+clean_names()
+```
+
+## When a Spreadsheet Isn't Enough
+
+### Databases
+
+![REDCap](images\redcap.png)
+
+-   Application Programming Interface (API)
+
+``` r
+ds <- redcap_read(redcap_uri=uri, token=token)$data 
+```
+
+## Literate Programming
+
+-   Markdown: a plain text format designed to be easy to write, and, even more important, easy to read
+-   May contain code chunks (`R`, `Python`, `Julia`, etc.)
+-   The file containing code and text is "knitted" or "rendered" to produce output to multiple possible formats, e.g., pdf, web pages, html slides, **even** MSWord or PowerPoint
+
+## My 2011 Master's Thesis
+
+![Written in GNU emacs](images/emacs_ess_Rnw.png)
+
+## Why are so many people downloading?
+
+![](images/uri_thesis.jpg) <https://digitalcommons.uri.edu/theses/107/>
+
+## CODE to Make Plots
+### ggplot in R, part of the "tidyverse"
+
+```{r}
+#| echo: true
+#| output-location: slide
+library(ggplot2)
+
+mtcars |> 
+  ggplot(aes(x = disp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "loess", formula = "y~x")
+```
+
+## Code to Make Tables
+### Flextable: Table Generation in R
+
+```{r}
+#| echo: true
+#| output-location: slide
+library(flextable)
+ft <- flextable(airquality[ sample.int(10),]) |> 
+  add_header_row(colwidths = c(4, 2), 
+                 values = c("Air quality", "Time")) |>          
+  theme_vanilla() |> 
+  add_footer_lines("Daily air quality measurements in NYC, May to Sept 1973.") |>
+  color(part = "footer", color = "#666666")
+
+ft
+```
+
+## Challenges
+
+-   Security and confidentiality of patient information
+-   Tools evolve, i.e., Sweave -\> knitr -\> Quarto
+-   You have to know what you are doing to make it pretty
+-   Multiple software tools, e.g., R, python, Stata, SAS
+-   Analysis pipelines are often complicated and computer intensive
+-   Collaboration pain-points
+
+## Reproducible AI or AI for Reproducibility
+![](images/ai_cures_all.jpg)
+
+[Is AI leading to a reproducibility crisis in science?](https://www.nature.com/articles/d41586-023-03817-6){target="_blank}
+
+## Documenting AI Use in Your Workflow
+
+```r
+# Good practice: Document AI assistance
+# File: analysis.R
+# Created: 2025-01-10
+# AI Tools Used: 
+#   - GitHub Copilot for regex pattern in lines 45-52
+#   - ChatGPT-4 for initial dplyr chain (modified in lines 78-95)
+# Last validated: 2025-01-10
+
+library(tidyverse)
+
+# AI-generated regex (verified against test cases)
+# Original prompt: "regex to extract ICD-10 codes from clinical notes"
+extract_icd10 <- function(text) {
+  str_extract_all(text, "\\b[A-TV-Z][0-9]{2}\\.?[0-9A-TV-Z]{0,4}\\b")
+}
+
+# Test cases to verify AI code
+test_cases <- tibble(
+  input = c("Patient has E11.9 diabetes", 
+            "Diagnosis: J18.9, I10",
+            "No codes here"),
+  expected = list(c("E11.9"), c("J18.9", "I10"), character(0))
+)
+
+test_cases <- test_cases %>%
+  mutate(
+    actual = map(input, extract_icd10),
+    passed = map2_lgl(expected, actual, identical)
+  )
+
+stopifnot(all(test_cases$passed))  # Halt if AI code fails tests
+```
+
+
+## Computational Non-Determinism Problem: **Hardware matters now.**
+
+Document your computing environment!
+
+```r
+# Even with set.seed(), some operations aren't reproducible
+library(keras)  # Python-based deep learning
+
+set.seed(123)  # This won't be enough!
+
+# Problem: GPU parallelism introduces randomness
+model <- keras_model_sequential() %>%
+  layer_dense(units = 64, activation = "relu") %>%
+  layer_dense(units = 1)
+
+# Run 1: loss = 0.234
+# Run 2: loss = 0.237  # Different! Even with same seed
+
+# Better approach: Document everything
+sessionInfo()  # R version, packages
+reticulate::py_config()  # Python environment
+# GPU model: NVIDIA RTX 3080
+# CUDA version: 11.8
+# Random seed: 123
+# Date/time: 2025-01-10 14:30 EST
+
+# For critical work: use CPU-only mode for reproducibility
+tensorflow::tf$config$set_visible_devices(list(), 'GPU')
+```
+
+## Online Resources
+
+-   [Health Data Science in R](https://alicepaul.github.io/health-data-science-using-r/){target="_blank"}
+
+-   [R for Data Science (2e)](https://r4ds.hadley.nz/){target="_blank"}
+
+-   [Data Wrangling, exploration and analysis with R](https://stat545.com/){target="_blank"}
+
+-   [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/){target="_blank"}
+
+-   [Happy Git and HitHub for the useR](https://happygitwithr.com/){target="_blank"}
+
+-   [Building reproducible analytical pipelines with R](https://raps-with-r.dev/){target="_blank"}
