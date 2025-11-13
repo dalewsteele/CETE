@@ -1,0 +1,210 @@
+/*-- scss:defaults --*/
+
+// Color palette
+$primary-color: #1e3a5f;
+$secondary-color: #e63946;
+$accent-color: #06aed5;
+$light-bg: #f8f9fa;
+$dark-text: #2d3436;
+
+// Fonts
+$presentation-heading-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$presentation-font-size-root: 40px;
+
+/*-- scss:rules --*/
+
+// Slide styling
+.reveal {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: $primary-color;
+  font-weight: 600;
+  text-transform: none;
+  margin-bottom: 0.5em;
+}
+
+.reveal h1 {
+  font-size: 2.2em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+}
+
+.reveal h3 {
+  font-size: 1.3em;
+  color: $accent-color;
+}
+
+// Improve lists
+.reveal ul,
+.reveal ol {
+  margin-left: 1em;
+}
+
+.reveal li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+// Code blocks
+.reveal pre {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+.reveal code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #d63384;
+  font-size: 0.9em;
+}
+
+.reveal pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+// Callouts
+.callout {
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  margin: 1em 0;
+  border-left: 5px solid;
+}
+
+.callout-important {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.callout-tip {
+  background-color: #d1ecf1;
+  border-color: #0dcaf0;
+}
+
+.callout-note {
+  background-color: #e7f3ff;
+  border-color: #0d6efd;
+}
+
+.callout-warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+// Links
+.reveal a {
+  color: $accent-color;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.reveal a:hover {
+  color: darken($accent-color, 15%);
+  text-decoration: underline;
+}
+
+// Images
+.reveal img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+// Fragments
+.reveal .fragment.highlight-red {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal .fragment.highlight-red.visible {
+  background-color: #ffebee;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+.reveal .fragment.grow {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal .fragment.grow.visible {
+  transform: scale(1.05);
+  color: $secondary-color;
+  font-weight: 600;
+}
+
+// Columns
+.columns {
+  display: flex;
+  gap: 1em;
+}
+
+.column {
+  flex: 1;
+}
+
+// Smaller text utility
+.smaller {
+  font-size: 0.85em;
+}
+
+// Footer
+.reveal .footer {
+  font-size: 0.6em;
+  color: #666;
+}
+
+// Background colors for specific slides
+.reveal section[background-color="#1e3a5f"] h1,
+.reveal section[background-color="#1e3a5f"] h2,
+.reveal section[background-color="#1e3a5f"] {
+  color: white;
+}
+
+.reveal section[background-color="#8b0000"] h2 {
+  color: white;
+}
+
+.reveal section[background-color="#5d001e"] h2 {
+  color: white;
+}
+
+// Aside text
+.aside {
+  font-size: 0.7em;
+  color: #666;
+  margin-top: 1em;
+  font-style: italic;
+}
+
+// Tables
+.reveal table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.reveal table th {
+  background-color: $light-bg;
+  font-weight: 600;
+}
+
+// Incremental highlights
+.reveal .highlight-last > .fragment:last-child.visible {
+  color: $secondary-color;
+  font-weight: 600;
+}
